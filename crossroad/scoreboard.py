@@ -10,6 +10,8 @@ class Scoreboard(Turtle):
     # Constructor
     def __init__(self):
         super().__init__()
+        with open("crossroad/data.txt") as data:
+            self.high_score = int(data.read())
         self.penup()
         self.hideturtle()
         self.goto(STARTING_POSITION)
@@ -19,7 +21,7 @@ class Scoreboard(Turtle):
     # Writes current level onto screen
     def print_level(self):
         self.clear()
-        self.write(arg=f"Level: {self.level}", font=FONT_LEVEL)
+        self.write(arg=f"Level: {self.level} High Score: {self.high_score}", font=FONT_LEVEL)
 
     # Increases level by 1
     def level_up(self):
@@ -29,4 +31,7 @@ class Scoreboard(Turtle):
     # Writes "GAME OVER"
     def game_over(self):
         self.goto(0, 0)
+        if self.level > self.high_score:
+            with open("crossroad/data.txt", mode="w") as data:
+                data.write(f"{self.level - 1}")
         self.write(arg="GAME OVER", align="center", font=FONT_GAME_OVER)
