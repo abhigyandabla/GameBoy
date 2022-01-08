@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, TurtleScreen
 import random
 
 # Took inspiration from 100 Days of Code by Angela Yu on Udemy, made a similar project in the course
@@ -61,3 +61,4 @@ def run_turtle_race():
 
     # Screen exited when "red x" is clicked
     screen.exitonclick()
+    TurtleScreen._RUNNING = True

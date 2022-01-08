@@ -1,5 +1,5 @@
 import time
-from turtle import Screen
+from turtle import Screen, TurtleScreen
 from crossroad.player import Player
 from crossroad.car_manager import CarManager
 from crossroad.scoreboard import Scoreboard
@@ -53,6 +53,6 @@ def run_crossroad():
         if random_num == 1:
             car_manager.make_car()
 
-
     # Exits program when "red x" is clicked
     screen.exitonclick()
+    TurtleScreen._RUNNING = True

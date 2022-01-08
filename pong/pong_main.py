@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, TurtleScreen
 from pong.paddle import Paddle
 from pong.ball import Ball
 from pong.scoreboard import Scoreboard
@@ -67,3 +67,4 @@ def run_pong_game():
 
     # Screen exits when "red x" is clicked
     screen.exitonclick()
+    TurtleScreen._RUNNING = True

@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, TurtleScreen
 
 # Constants to move the turtle each time and angle by
 MOVE_BY = 8
@@ -47,3 +47,4 @@ def run_sketch():
     screen.onkey(clear, "c")
 
     screen.exitonclick()
+    TurtleScreen._RUNNING = True

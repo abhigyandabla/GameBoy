@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, TurtleScreen
 from snake_game.food import Food
 from snake_game.scoreboard import Scoreboard
 from snake_game.snake import Snake
@@ -58,3 +58,4 @@ def run_snake_game():
 
     # Exits program when "red x" is clicked
     screen.exitonclick()
+    TurtleScreen._RUNNING = True

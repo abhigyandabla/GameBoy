@@ -1,7 +1,7 @@
 import random
 from hangman.hangman_art import stages
 from hangman.hangman_words import word_list
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, TurtleScreen
 
 # Took inspiration from a similar project we did in the 100 days of code course by Angela Yu on Udemy
 # It was a hangman console game that I coded myself with the help of the course content and made use
@@ -95,3 +95,4 @@ def run_hangman_game():
         drawing_turtle.write(arg=stages[lives], font=("Arial", 15, "normal"))
 
     screen.exitonclick()
+    TurtleScreen._RUNNING = True
