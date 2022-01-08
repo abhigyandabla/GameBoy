@@ -1,3 +1,4 @@
+"""
 from turtle import Screen
 from race import race
 from snake_game import game
@@ -30,3 +31,5 @@ elif user_decision.lower() == "crossroad":
 
 # Screen exits when "red x" is clicked
 screen.exitonclick()
+
+"""
